@@ -7,6 +7,10 @@ class ProductTest < ActiveSupport::TestCase
   fixtures :products  #add this line if you want to load only a specific fixtures
                       #all fixtures are loaded automatically by default
 
+  # .invalid/.valid tests validity of input
+  # .errors gives an array of errors
+  # .any? checks whether there is an error related to the attribute
+
   test "product attributes must not be empty" do
     product = Product.new
     assert product.invalid?

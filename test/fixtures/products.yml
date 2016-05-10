@@ -21,9 +21,9 @@ ruby:
   price: 49.50
   image_url: ruby.png
 
-#short:
-#  title: Too Short
-#  description:
-#    Test if title length is too short
-#  price: 49.50
-#  image_url: MyString
+short:
+  title: Too Short
+  description:
+    Test if title length is too short
+  price: 49.50
+  image_url: MyString
