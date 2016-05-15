@@ -46,8 +46,10 @@
   #side{
     float: left;
     padding: 1em 2em;
-    width: 13em;
+    width: 15em;
     background: #141;
+    margin-right: 3em;
+    height: 50em;
 
     form, div{
       display: inline;
@@ -78,24 +80,32 @@
       }
     }
   }
+  .myAdds{
+    color: white;
+  }
 }
-.myAdds{
-  color: white;
-}
+
 
 .depot_form {
   fieldset {
+    width: 20%;
     background: #efe;
     legend {
         color: #dfd;
-        background: #141; font-family: sans-serif; padding: 0.2em 1em;
+        background: #141;
+        font-family: sans-serif;
+        padding: 0.2em 1em;
     }
   }
 
   form {
     label {
       width: 5em;
-      float: left; text-align: right; padding-top: 0.2em; margin-right: 0.1em; display: block;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
     }
 
     select, textarea, input {
@@ -103,11 +113,23 @@
     }
 
     .submit {
-    margin-left: 4em;
+      margin-left: 4em;
+    }
+
+    .loginSubmit{
+      float: right;
+    }
+
+    div{
+      display: flex;
     }
 
     br {
       display: none
     }
   }
+}
+.locale {
+  float: right;
+  margin: -0.25em 0.1em;
 }

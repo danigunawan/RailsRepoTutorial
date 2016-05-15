@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+
+  skip_before_action :authorize, only: :show
+
+  before_action :set_cart, only: [:new, :create, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -17,11 +20,6 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-
-    if @cart.line_items.empty?
-      redirect_to store_url, notice: "Your cart is empty"
-      return
-    end
   end
 
   # GET /products/1/edit

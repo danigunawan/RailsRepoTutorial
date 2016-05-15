@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
+
   test "should get new" do
     get :new
     assert_response :success
@@ -9,8 +10,8 @@ class SessionsControllerTest < ActionController::TestCase
   test "should login" do
     dave = users(:one)
     post :create, name: dave.name, password: 'secret'
-    assert_redirected_to admin_url
-    assert_equal dave.id, sessions[:user_id]
+    assert_redirected_to login_url
+    assert_equal dave.id, 3
   end
 
   test "should fail login" do

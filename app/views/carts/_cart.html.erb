@@ -1,20 +1,7 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
 
-<h2>Your Cart</h2>
+<h2><%= t('.title') %></h2>
 <table>
-<!--    <% @cart.line_items.each do |item| %>
-    <tr>
-      #I added the next line you can remove if need be
-      <td><%= button_to 'Delete Item', @line_items, method: :delete, data: {confirm: 'CHANGED'} %></td>
-
-      <td><%= item.quantity %> &times; </td>
-      <td><%= item.product.title %></td>
-      <td class = 'item_price'><%= number_to_currency(item.total_price)%>
-    </tr>
-    <% end %>-->
-    <%= render(@cart.line_items) %>
+<%= render(@cart.line_items) %>
     <tr class = 'total_line'>
       <td colspan="2">Total: </td>
       <td class = 'total_cell'><%= number_to_currency(@cart.total_price)%></td>
@@ -22,6 +9,6 @@
 
 </table>
 <br/>
-<%= button_to 'Checkout', new_order_path, method: :get %>
-<%= button_to 'Empty Cart', @cart, method: :delete,
+<%= button_to t('.checkout'), new_order_path, method: :get %>
+<%= button_to t('.empty'), @cart, method: :delete,
               data: {confirm: 'Are you sure?'} %>

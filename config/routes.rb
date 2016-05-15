@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   get 'store/index'
   resources :products do
     get :who_bought, on: :member
+    put :show, on: :member
+  end
+
+  resources :line_items do
+    post 'decrement', on: :member
   end
 
   scope '(:locale)' do
