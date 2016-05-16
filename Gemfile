@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
+gem 'will_paginate', '~> 3.1.0'
+gem 'autoprefixer-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record

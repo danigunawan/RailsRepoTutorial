@@ -11,7 +11,7 @@ class SessionsControllerTest < ActionController::TestCase
     dave = users(:one)
     post :create, name: dave.name, password: 'secret'
     assert_redirected_to login_url
-    assert_equal dave.id, 3
+    assert_equal dave.id, 980190962
   end
 
   test "should fail login" do
@@ -27,7 +27,7 @@ class SessionsControllerTest < ActionController::TestCase
 
   test "should get destroy" do
     get :destroy
-    assert_response :success
+    assert_redirected_to store_url
   end
 
 end

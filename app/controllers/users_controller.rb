@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   def destroy
     message = "User was not destroyed"
     begin
-      if (@user.id != session[:user_id]) then
+      if (@user.id != session[:user_id])
         @user.destroy
         flash[:notice] = "User #{@user.name} deleted"
         message = "User was destroyed"
